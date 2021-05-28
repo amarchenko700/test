@@ -1,0 +1,29 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        //maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases/' }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.2.1"
+        // implementation fileTree(include: ['*.jar'], dir: 'libs')
+        //implementation 'com.google.code.ksoap2-android:ksoap2-android:3.6.1'
+        //  maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases/' }
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        //implementation files('libs/ksoap2-android-2.5.2.jar')
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
